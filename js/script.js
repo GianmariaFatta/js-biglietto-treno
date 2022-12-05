@@ -21,4 +21,18 @@ console.log(userDistance);
 const userPrice = (0.21 * userDistance);
 console.log(userPrice);
 
+//stabilire sconto del 20%
+let discountSmall = ((userPrice * 20) / 100 )
+console.log(discountSmall);
+
+//stabilire sconto del 40%
+let discountBig = ((userPrice * 40) / 100)
+console.log(discountBig);
+
+//se è under 18...
+if (userAge < 18){
+    moneyElement.innerText = (userPrice - discountSmall)
+}
+
+
 
