@@ -1,0 +1,28 @@
+.container{
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+h1{
+  
+    color:red;
+    font-size:60px
+}
+
+
+.bounce-in-right {
+    animation: bounce-in-right 2s ease ;
+  }
+  @keyframes bounce-in-right {
+    0% {
+     
+      transform: translateX(2000px);
+    }
+    60% {
+      
+      transform: translateX(-30px);
+    }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+  

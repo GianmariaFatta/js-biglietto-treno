@@ -17,6 +17,7 @@ console.log(userAge);
 const userDistance = parseInt(prompt("Quanti km devi percorrere?" , 50).trim());
 console.log(userDistance);
 
+
 //calcola il prezzo del biglietto
 const userPrice = (0.21 * userDistance);
 console.log(userPrice);
@@ -28,21 +29,14 @@ console.log(discountSmall);
 //stabilire sconto del 40%
 let discountBig = ((userPrice * 40) / 100)
 console.log(discountBig);
+ 
 
 //se è under 18...
-if (userAge < 18){
-    moneyElement.innerText = (userPrice - discountSmall).toFixed(2)
-} else if (userAge >= 65){
-    moneyElement.innerText = (userPrice - discountBig).toFixed(2) }
-else (moneyElement.innerText= userPrice.toFixed(2));
-
-// //se è over 65..
-// if (userAge >= 65){
-//     moneyElement.innerText = (userPrice - discountBig)
-// }
-
-// moneyElement.innerText= userPrice;
-
-
-
-
+if (isNaN (userAge) || isNaN (userDistance)) {
+    document.getElementById("money").innerHTML = "HAI INSERITO CARATTERI INVALIDI. RIPROVA";
+ }
+else if (userAge < 18){
+    moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + (userPrice - discountSmall).toFixed(2)
+}else if (userAge >= 65){
+    moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + (userPrice - discountBig).toFixed(2) }
+else { moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + userPrice.toFixed(2)};
