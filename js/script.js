@@ -31,8 +31,18 @@ console.log(discountBig);
 
 //se è under 18...
 if (userAge < 18){
-    moneyElement.innerText = (userPrice - discountSmall)
-}
+    moneyElement.innerText = (userPrice - discountSmall).toFixed(2)
+} else if (userAge >= 65){
+    moneyElement.innerText = (userPrice - discountBig).toFixed(2) }
+else (moneyElement.innerText= userPrice.toFixed(2));
+
+// //se è over 65..
+// if (userAge >= 65){
+//     moneyElement.innerText = (userPrice - discountBig)
+// }
+
+// moneyElement.innerText= userPrice;
+
 
 
 
