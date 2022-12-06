@@ -33,10 +33,10 @@ console.log(discountBig);
 
 //se è under 18...
 if (isNaN (userAge) || isNaN (userDistance)) {
-    document.getElementById("money").innerHTML = "HAI INSERITO CARATTERI INVALIDI. RIPROVA";
+    document.getElementById("money").innerText = "HAI INSERITO CARATTERI INVALIDI. RIPROVA";
  }
 else if (userAge < 18){
-    moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + (userPrice - discountSmall).toFixed(2)
+    moneyElement.innerText = "il prezzo del tuo biglietto è di €" + (userPrice - discountSmall).toFixed(2)
 }else if (userAge >= 65){
-    moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + (userPrice - discountBig).toFixed(2) }
-else { moneyElement.innerHTML = "il prezzo del tuo biglietto è di €" + userPrice.toFixed(2)};
+    moneyElement.innerText = "il prezzo del tuo biglietto è di €" + (userPrice - discountBig).toFixed(2) }
+else { moneyElement.innerText = "il prezzo del tuo biglietto è di €" + userPrice.toFixed(2)};
